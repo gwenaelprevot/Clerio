@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <meta name="format-detection" content="telephone=no">
-  <link rel="icon" href="http://livedemo00.template-help.com/wt_58056/images/favicon.ico" type="image/x-icon">
   <title>Contacts</title>
 
   <!-- Bootstrap -->
@@ -215,6 +214,23 @@
             </address>
           </div>
           <div class="col-md-6">
+            <!-- Php -->
+            <?php
+            if (empty($_post['nom']) && empty($_post['prenom']) && empty($_post['email']) && empty($_post['message']) && empty($_post['postal']) && empty($_post['ville']) && empty($_post['tel']) ) {
+              echo '<div class=" alert alert-danger" role="alert"><p>test</p></div>';
+            } else {
+              // $nom = $_POST['nom'];
+              // $prenom = $_POST['prenom'];
+              // $mail = $_POST['email'];
+              // $message = $_POST['message'];
+              // $post = $_POST['postal'];
+              // $vil = $_POST['ville'];
+              // $tel = $_POST['tel'];
+              // echo $mail.''.$prenom.''.$nom.''.$message.''.$post.''.$vil.''.$tel;
+              echo '<div class=" alert alert-success" role="alert"><p>test</p></div>';
+            }
+            ?>
+            <!--Fin Php-->
             <form class="rd-mailform" method="post" action="Contacts.php">
               <!-- RD Mailform Type -->
               <input name="form-type" value="contact" type="hidden">
@@ -275,14 +291,7 @@
         </div>
       </div>
     </section>
-<!-- Php -->
-
-
-<!--Fin Php-->
-
     <!-- END CONTACT US -->
-
-
   </main>
 
   <!--========================================================
